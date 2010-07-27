@@ -1,0 +1,169 @@
+/* color scheme:
+
+http://colorschemedesigner.com/#3D31TrXvvw0w0
+
+*/
+
+a:hover {
+    text-decoration: none;
+}
+
+body {
+    background: url(../images/gray_maze_background.png);
+}
+
+#page-container {
+    background: white;
+}
+
+#page-header,
+#page-footer {
+    /* #474747, fine grain pattern from jQuery UI at 20% */
+    background: url(../images/charcoal_fine_grain_background.png);
+    color: #ececec;
+}
+
+#page-header h1 {
+    padding: 10px 0 0 10px;
+    color: #fff;
+    font-size: 2em;
+}
+
+#page-header a {
+    color: #FBCC20;
+    text-decoration: none;
+}
+
+#page-header a:hover {
+    color: #BCA241;
+    text-decoration: underline;
+}
+
+#header-left a {
+    text-decoration: none;
+    font-size: .7em;
+}
+
+#header-right ul {
+    list-style: none;
+    float: right;
+    margin-top: 10px;
+}
+
+#header-right li {
+    float: left;
+    margin: 0 10px 0 0;
+    border-right: solid 1px white;
+}
+
+#header-right li a,
+#header-right li strong {
+    margin-right: 10px;
+}
+
+#header-right li strong {
+
+}
+
+#header-right li.last {
+    margin-right: 10px;
+    border: none;
+}
+
+#header-right li.last a {
+    margin-right: 0;
+}
+
+#page-nav {
+    background: url(../images/nav_background.png) repeat-x left -30px;
+}
+
+/*
+
+###
+### SUPERFISH NAV
+###
+
+*/
+
+.sf-menu {
+    float: none;
+    margin: 0;
+}
+.sf-menu a {
+    border-left: 1px solid #ececec;
+    border-top: none;
+    padding: .6em .8em;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+.sf-menu li.first a {
+    border-left: none;
+}
+
+.sf-menu a,
+.sf-menu a:visited  {
+    color: #FBCC20;
+}
+
+/* cancel default styles */
+.sf-menu li,
+.sf-menu li li,
+.sf-menu li li li {
+    background: none;
+}
+
+/* top-level menus */
+.sf-menu li {
+    background: url(../images/nav_background.png) repeat-x left -30px;
+}
+
+.sf-menu li a,
+.sf-menu li a:visited { /* visited pseudo selector so IE6 applies text colour*/
+    color: #FBCC20;
+}
+
+.sf-menu li a:hover,
+.sf-menu li.sfHover,
+.sf-menu li.sfHover a,
+.sf-menu li.sfHover a:hover { /* visited pseudo selector so IE6 applies text colour*/
+    color: #000;
+    background: #ececec;
+}
+
+.sf-menu li a:hover {
+    text-decoration: underline;
+}
+
+.sf-menu li:hover,
+.sf-menu li.sfHover,
+.sf-menu a:focus,
+.sf-menu a:hover,
+.sf-menu a:active {
+    color: #000;
+    background: #ececec;
+    outline: 0;
+}
+
+/* sub-menus */
+.sf-menu ul {
+    border: solid 1px #bdbdbd;
+    border-top: none;
+    border-bottom: none;
+}
+
+.sf-menu ul li {
+    border-bottom: solid 1px #bdbdbd;
+}
+
+.sf-menu li.sfHover ul li a:hover {
+    background: #ffe894;
+    text-decoration: underline;
+}
+
+/*.sf-menu li:hover, .sf-menu li.sfHover,*/
+/*.sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active {*/
+/*	background: #ececec;*/
+/*	outline: 0;*/
+/*        color: #000;*/
+/*}*/

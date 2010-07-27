@@ -1,0 +1,13 @@
+<div id="user-messages">
+    {% for msg in user.get_messages() %}
+        {% if loop.first %}
+            <ul>
+        {% endif %}
+                <li class="sev-{{ msg.severity }}">
+                    <strong class="sev-{{ msg.severity }}">{{msg.severity}}</strong>: {{msg.text}}
+                </li>
+        {% if loop.last %}
+            </ul>
+        {% endif %}
+    {% endfor %}
+</div>
