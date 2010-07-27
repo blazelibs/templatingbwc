@@ -4,10 +4,34 @@ http://colorschemedesigner.com/#3D31TrXvvw0w0
 
 */
 
+/*
+
+###
+### TYPOGRAPHY
+###
+
+*/
+a,
+a:active,
+a:hover {
+    color: #215BA5;
+}
+
 a:hover {
     text-decoration: none;
 }
 
+a:visited {
+    color: #0B356B;
+}
+
+/*
+
+###
+### ELEMENTS
+###
+
+*/
 body {
     background: url(../images/gray_maze_background.png);
 }
@@ -19,13 +43,13 @@ body {
 #page-header,
 #page-footer {
     /* #474747, fine grain pattern from jQuery UI at 20% */
-    background: url(../images/charcoal_fine_grain_background.png);
+    background: url(../images/dark_fine_grain_background.png);
     color: #ececec;
 }
 
 #page-header h1 {
     padding: 10px 0 0 10px;
-    color: #fff;
+    color: #ececec;
     font-size: 2em;
 }
 
@@ -75,7 +99,8 @@ body {
 }
 
 #page-nav {
-    background: url(../images/nav_background.png) repeat-x left -30px;
+    /* jQuery UI themeroller: #5e5e5e, inset soft, 20% */
+    background: url(../images/charcoal_inset_background.png) repeat-x left -30px;
 }
 
 /*
@@ -90,6 +115,11 @@ body {
     float: none;
     margin: 0;
 }
+
+.sf-sub-indicator {
+    background-image: url('../images/superfish_arrows.png');
+}
+
 .sf-menu a {
     border-left: 1px solid #ececec;
     border-top: none;
@@ -111,11 +141,6 @@ body {
 .sf-menu li li,
 .sf-menu li li li {
     background: none;
-}
-
-/* top-level menus */
-.sf-menu li {
-    background: url(../images/nav_background.png) repeat-x left -30px;
 }
 
 .sf-menu li a,
@@ -157,13 +182,6 @@ body {
 }
 
 .sf-menu li.sfHover ul li a:hover {
-    background: #ffe894;
+    background: #fdf9e5;
     text-decoration: underline;
 }
-
-/*.sf-menu li:hover, .sf-menu li.sfHover,*/
-/*.sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active {*/
-/*	background: #ececec;*/
-/*	outline: 0;*/
-/*        color: #000;*/
-/*}*/
