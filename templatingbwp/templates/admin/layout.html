@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <base href="{{ current_url(root_only=True) }}" />
+    <title>
+        {% include 'templating:admin/include_title.html' %}
+    </title>
+
+    {% include 'templating:admin/include_css.html' %}
+    {% include 'templating:admin/include_js.html' %}
+</head>
+<body>
+    <div id="page-container">
+        <div id="page-header">
+            {% include 'templating:admin/include_page_header.html' %}
+        </div>
+        <div id="page-nav">
+            {% include 'templating:admin/include_nav.html' %}
+        </div>
+        <div id="page-body">
+            {% include 'templating:admin/include_user_messages.html' %}
+            {% block page_content %}{% endblock %}
+        </div>
+        <div id="page-footer">
+            {% include 'templating:admin/include_page_footer.html' %}
+        </div>
+    </div>
+</body>
+</html>

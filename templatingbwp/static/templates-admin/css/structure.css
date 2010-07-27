@@ -1,0 +1,23 @@
+
+/*
+  ALL HEIGHTS SHOULD BE MULTIPLES OF 18
+
+    see note on typography:
+    http://wiki.github.com/joshuaclayton/blueprint-css/quick-start-tutorial
+
+  BLUEPRINT CSS SETTINGS (yaml)
+  tbwp-admin:
+    path: /home/rsyring/dev/blaze/templatingbwp-src/default/templatingbwp/static/blueprint-css
+    semantic_classes:
+      "#page-header, #page-nav, #page-body, #page-footer": ".span-24"
+      "#page-footer": ".last"
+      "#page-container": ".container"
+      "#page-container:after": ".clearfix:after"
+      "#page-nav:after": ".clearfix:after"
+*/
+
+#page-header {
+    height: 54px;
+}
+
+

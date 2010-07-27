@@ -1,0 +1,2 @@
+^(build|dist|TemplatingBWP\.egg-info)/
+\.py[co]$
