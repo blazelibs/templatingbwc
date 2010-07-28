@@ -14,3 +14,27 @@ class TestTemplates(object):
         r = self.ta.get('/login')
         r = r.follow()
         assert 'Change Password' in r
+
+
+    def check_200(self, url):
+        self.ta.get(url)
+
+    def test_urls(self):
+        urls = (
+            '/',
+            '/typography',
+            '/login',
+            '/logout',
+            '/user-messages',
+            '/boxes',
+            '/boxes-and-text',
+            '/boxes-and-boxes',
+            '/modals',
+            '/tables',
+            '/forms',
+            '/jquery-ui',
+            '/icons',
+        )
+
+        for url in urls:
+            yield self.check_200, url
