@@ -2,6 +2,7 @@ from blazeweb.globals import ag
 from blazeweb.testing import TestApp
 
 class TestTemplates(object):
+
     @classmethod
     def setup_class(cls):
         cls.ta = TestApp(ag.wsgi_test_app)
@@ -14,7 +15,6 @@ class TestTemplates(object):
         r = self.ta.get('/login')
         r = r.follow()
         assert 'Change Password' in r
-
 
     def check_200(self, url):
         self.ta.get(url)
