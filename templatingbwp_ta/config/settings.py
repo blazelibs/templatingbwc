@@ -29,6 +29,11 @@ class Default(DefaultSettings):
         self.add_route('/boxes', endpoint='boxes.html')
         self.add_route('/boxes-and-text', endpoint='boxes_and_text.html')
         self.add_route('/boxes-and-boxes', endpoint='boxes_and_boxes.html')
+        self.add_route('/modals', endpoint='modals.html')
+        self.add_route('/tables', endpoint='tables.html')
+        self.add_route('/forms', endpoint='forms.html')
+        self.add_route('/jquery-ui', endpoint='jquery_ui.html')
+        self.add_route('/icons', endpoint='icons.html')
 
 class Dev(Default):
     def init(self):

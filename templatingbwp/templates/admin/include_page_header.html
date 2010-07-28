@@ -5,7 +5,7 @@
     <ul>
         {% if user.is_authenticated %}
             <li>Hello <strong>{{ user.display_name }}</strong></li>
-            <li><a href="/users/change_password">Change Password</a></li>
+            <li><a href="/forms">Change Password</a></li>
             <li class="last"><a href="/logout">Logout</a></li>
         {% else %}
             <li>Hello <strong>Guest</strong></li>
