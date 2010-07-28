@@ -4,7 +4,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <base href="{{ current_url(root_only=True) }}" />
     <title>
-        {% include 'templating:admin/include_title.html' %}
+        {% block title %}
+            {% include 'templating:admin/include_title.html' %}
+        {% endblock%}
     </title>
 
     {% include 'templating:admin/include_css.html' %}
@@ -19,8 +21,23 @@
             {% include 'templating:admin/include_nav.html' %}
         </div>
         <div id="page-body">
-            {% include 'templating:admin/include_user_messages.html' %}
-            {% block page_content %}{% endblock %}
+            {% if body_type and body_type != 'single-col' %}
+            <div id="page-center-col" class="span-16">
+            {% else %}
+            <div id="page-center-col">
+            {% endif %}
+                <div class="content">
+                    {% include 'templating:admin/include_user_messages.html' %}
+                    {% block page_content %}{% endblock %}
+                </div>
+            </div>
+            {% if body_type == 'right-col' %}
+            <div id="page-right-col" class="span-8 last">
+                <div class="content">
+                    {% block right_col %}{% endblock %}
+                </div>
+            </div>
+            {% endif %}
         </div>
         <div id="page-footer">
             {% include 'templating:admin/include_page_footer.html' %}
