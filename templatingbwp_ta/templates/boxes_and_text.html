@@ -1,7 +1,7 @@
-{% set body_type = 'right-col' %}
+{% set body_type = 'sidebar-right' %}
 {% extends settings.template.default %}
 {% block title %}Boxes &amp; Text | {{super()}}{% endblock %}
-{% block page_content %}
+{% block primary_content %}
     <h1 id="primary-heading">Heading</h1>
     <p>
         Lorem ipsum dolor sit amet, consectetur
@@ -43,7 +43,7 @@
         <li>List Item 3</li>
     </ol>
 {% endblock %}
-{% block right_col %}
+{% block secondary_content %}
     <div class="cbox cbox-ph-padding">
         <div class="cbox-header">
             <h2>Box Header</h2>

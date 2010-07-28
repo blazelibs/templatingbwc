@@ -46,9 +46,8 @@ h2 {
 }
 
 #primary-heading {
-    /* need to use px for top margin so cbox-ph-padding can match */
-    margin-top: 29px;
     font-size: 1.9em;
+    margin-top: 12px;
     margin-bottom: .5em;
 }
 
@@ -89,6 +88,11 @@ body {
 
 #page-container {
     background: white;
+    text-align: left; /* w/out this IE7 shows everything in the center */
+}
+
+#page-container.showgrid {
+    background:url(../../blueprint-css/src/grid.png);
 }
 
 #page-header {
@@ -103,7 +107,7 @@ body {
 }
 
 #page-header h1 {
-    padding: 10px 0 0 10px;
+    padding: 10px 0 0 14px; /* match left padding of content elements */
     color: #ececec;
     font-size: 2em;
     font-weight: normal;
@@ -128,6 +132,7 @@ body {
     list-style: none;
     float: right;
     margin-top: 10px;
+    margin-right: 4px; /* match right padding of content elements, but li has 10 px */
 }
 
 #header-right li {
@@ -159,31 +164,24 @@ body {
     background: url(../images/charcoal_inset_background.png) repeat-x left -30px;
 }
 
-#page-center-col .content {
-    padding: 0em 1.5em 1.5em 1.5em;
-    margin-top: 1em;
+#primary-content {
+    padding: 12px 14px 14px 14px;
     position: relative;
 }
 
-#page-center-col .content {
-    /* use pixels equivalent to 1em; pixels so we can work with the grid easier */
-    padding: 0em 18px 18px 18px;
-    margin-top: 1em;
-    position: relative;
+.sidebar-right #primary-content {
+    width: 630px;
+    float: left;
 }
 
-#page-center-col.span-16 .content {
-    /* the span-16 will add 10px of right margin */
-    padding-right: 8px;
-}
-
-#page-right-col .content {
-    margin-top: 1em;
-    padding-right: 18px;
-}
-
-#user-messages {
-    position: relative;
+.sidebar-right #sidebar-content {
+    /* primary-content padding + width => 14 * 2 + 630 = 658
+       total width - primary-content width => 950 - 658 = 292
+       space available - sidebar padding => 292 - 14 = 278
+    */
+    width: 278px;
+    padding: 12px 14px 0 0;
+    float: left;
 }
 
 #user-messages ul {
@@ -204,9 +202,6 @@ body {
 
 #close-all-messages {
     text-align: right;
-    position: absolute;
-    bottom: -1.8em;
-    right: 0;
 }
 
 #close-all-messages a {
@@ -257,12 +252,16 @@ body {
 }
 
 .cbox {
-    margin-top: 1em;
+    /* matches the top margin on primary-header */
+    margin-top: 12px;
 }
 
-/* match the extra padding of a primary heading */
-.cbox-ph-padding {
-    margin-top: 29px;
+/*
+  use when you don't need to match the margin of a primary-heading, useful
+  when both content columns have boxes
+*/
+.cbox-top {
+    margin-top: 0px;
 }
 
 .cbox-header {
@@ -404,6 +403,7 @@ li.sfHover > a > .sf-sub-indicator {
 .sf-menu {
     float: none;
     margin: 0;
+    padding-left: 4px; /* menu's have 10px of left margin and we want 14px total to match content padding */
 }
 
 .sf-sub-indicator {
@@ -451,6 +451,7 @@ li.sfHover > a > .sf-sub-indicator {
     color: #000;
     background: #ececec;
     outline: 0;
+    z-index: 1; /* IE7: drop-down nav ends up behind box headers without this */
 }
 
 /* sub-menus */
@@ -465,4 +466,8 @@ li.sfHover > a > .sf-sub-indicator {
 .sf-menu li.sfHover ul li a:hover {
     background: #fdf9e5;
     text-decoration: underline;
+}
+
+.sf-menu ul ul {
+    border-top: 1px solid #bdbdbd;
 }
