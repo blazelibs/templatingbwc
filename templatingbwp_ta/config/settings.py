@@ -22,7 +22,13 @@ class Default(DefaultSettings):
 
     def init_routing(self):
         self.add_route('/', endpoint='index.html')
-        self.add_route('/authorized-user', endpoint='AuthorizedUser')
+        self.add_route('/typography', endpoint='typography.html')
+        self.add_route('/login', endpoint='Login')
+        self.add_route('/logout', endpoint='Logout')
+        self.add_route('/user-messages', endpoint='UserMessages')
+        self.add_route('/boxes', endpoint='boxes.html')
+        self.add_route('/boxes-and-text', endpoint='boxes_and_text.html')
+        self.add_route('/boxes-and-boxes', endpoint='boxes_and_boxes.html')
 
 class Dev(Default):
     def init(self):

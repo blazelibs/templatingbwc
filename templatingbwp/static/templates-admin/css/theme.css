@@ -1,16 +1,67 @@
-/* color scheme:
+/*
+  ALL HEIGHTS SHOULD BE MULTIPLES OF 18
 
-http://colorschemedesigner.com/#3D31TrXvvw0w0
+    see note on typography:
+    http://wiki.github.com/joshuaclayton/blueprint-css/quick-start-tutorial
+
+  BLUEPRINT CSS SETTINGS (yaml)
+  tbwp-admin:
+    path: /home/rsyring/dev/blaze/templatingbwp-src/default/templatingbwp/static/blueprint-css
+    semantic_classes:
+      "#page-header, #page-nav, #page-body, #page-footer": ".span-24"
+      "#page-footer": ".last"
+      "#page-container": ".container"
+      "#page-container:after": ".clearfix:after"
+      "#page-nav:after": ".clearfix:after"
+
+    COLOR SCHEME:
+
+    http://colorschemedesigner.com/#3D31TrXvvw0w0
 
 */
 
 /*
 
 ###
-### TYPOGRAPHY
+### GENERAL TYPOGRAPHY
 ###
 
 */
+
+body {
+    font-family:Lucida Grande,Verdana,Lucida Sans Regular,Lucida Sans Unicode,Arial,sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 1.9em;
+    margin-bottom: .5em;
+}
+h2 {
+    font-size: 1.7em;
+    margin-bottom: .75em;
+}
+
+#primary-heading {
+    /* need to use px for top margin so cbox-ph-padding can match */
+    margin-top: 29px;
+    font-size: 1.9em;
+    margin-bottom: .5em;
+}
+
+/* give margin so the title doesn't look like a heading */
+dl {
+    margin-left: 2.5em;
+}
+
+/* images on top are before any text, so no top margin */
+p img.top {
+    margin-top: 0px;
+}
+
 a,
 a:active,
 a:hover {
@@ -40,6 +91,10 @@ body {
     background: white;
 }
 
+#page-header {
+    height: 54px;
+}
+
 #page-header,
 #page-footer {
     /* #474747, fine grain pattern from jQuery UI at 20% */
@@ -51,6 +106,7 @@ body {
     padding: 10px 0 0 10px;
     color: #ececec;
     font-size: 2em;
+    font-weight: normal;
 }
 
 #page-header a {
@@ -77,7 +133,7 @@ body {
 #header-right li {
     float: left;
     margin: 0 10px 0 0;
-    border-right: solid 1px white;
+    border-right: solid 1px #bdbdbd;
 }
 
 #header-right li a,
@@ -103,6 +159,140 @@ body {
     background: url(../images/charcoal_inset_background.png) repeat-x left -30px;
 }
 
+#page-center-col .content {
+    padding: 0em 1.5em 1.5em 1.5em;
+    margin-top: 1em;
+    position: relative;
+}
+
+#page-center-col .content {
+    /* use pixels equivalent to 1em; pixels so we can work with the grid easier */
+    padding: 0em 18px 18px 18px;
+    margin-top: 1em;
+    position: relative;
+}
+
+#page-center-col.span-16 .content {
+    /* the span-16 will add 10px of right margin */
+    padding-right: 8px;
+}
+
+#page-right-col .content {
+    margin-top: 1em;
+    padding-right: 18px;
+}
+
+#user-messages {
+    position: relative;
+}
+
+#user-messages ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#user-messages li {
+    margin: 0 0 .3em 0;
+    padding: .3em;
+    padding-left: 35px;
+    background-position: 10px 50%;
+    background-repeat: no-repeat;
+    border: solid 1px;
+    position: relative;
+}
+
+#close-all-messages {
+    text-align: right;
+    position: absolute;
+    bottom: -1.8em;
+    right: 0;
+}
+
+#close-all-messages a {
+    text-decoration: none;
+}
+
+#close-all-messages a:hover {
+    text-decoration: underline;
+}
+
+#user-messages .close-icon {
+    position: absolute;
+    display: block;
+    height: 12px;
+    width: 12px;
+    background: url(../icons/black-x-12.png) no-repeat;
+    top: 3px;
+    right: 3px;
+    cursor: pointer;
+}
+
+#user-messages li.sev-error {
+    background-image: url(../icons/cancel.png);
+    background-color: #FBE3E4;
+    border-color: #FBC2C4;
+    color: #860006;
+}
+
+#user-messages li.sev-warning {
+    background-image: url(../icons/error.png);
+    background-color: #FFF6BF;
+    border-color: #FFD324;
+    color: #5F5200;
+}
+
+#user-messages li.sev-notice {
+    background-image: url(../icons/information.png);
+    background-color: #8FBDE0;
+    border-color: #6BACDE;
+    color: #003863;
+}
+
+#user-messages li.sev-success {
+    background-image: url(../icons/accept.png);
+    background-color: #E6EFC2;
+    border-color: #C6D880;
+    color: #4E6100;
+}
+
+.cbox {
+    margin-top: 1em;
+}
+
+/* match the extra padding of a primary heading */
+.cbox-ph-padding {
+    margin-top: 29px;
+}
+
+.cbox-header {
+    background: url(../images/charcoal_inset_background.png) repeat-x left -30px;
+}
+
+.cbox-header h1,
+.cbox-header h2,
+.cbox-header h3,
+.cbox-header h4,
+.cbox-header h5,
+.cbox-header h6,
+h1.cbox-header,
+h2.cbox-header,
+h3.cbox-header,
+h4.cbox-header,
+h5.cbox-header,
+h6.cbox-header {
+    color: #ececec;
+    padding: .3em .4em;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.cbox-content {
+    padding: 1em;
+    border: #bdbdbd solid 1px;
+    border-top: 0px;
+}
+
 /*
 
 ###
@@ -111,22 +301,122 @@ body {
 
 */
 
+/*** ESSENTIAL STYLES ***/
+.sf-menu, .sf-menu * {
+	margin:			0;
+	padding:		0;
+	list-style:		none;
+}
+.sf-menu {
+	line-height:	1.0;
+}
+.sf-menu ul {
+	position:		absolute;
+	top:			-999em;
+	width:			10em; /* left offset of submenus need to match (see below) */
+}
+.sf-menu ul li {
+	width:			100%;
+}
+.sf-menu li:hover {
+	visibility:		inherit; /* fixes IE7 'sticky bug' */
+}
+.sf-menu li {
+	float:			left;
+	position:		relative;
+}
+.sf-menu a {
+	display:		block;
+	position:		relative;
+}
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul {
+	left:			0;
+	top:			2.1em; /* match top ul list item height */
+	z-index:		99;
+}
+ul.sf-menu li:hover li ul,
+ul.sf-menu li.sfHover li ul {
+	top:			-999em;
+}
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul {
+	left:			10em; /* match ul width */
+	top:			0;
+}
+ul.sf-menu li li:hover li ul,
+ul.sf-menu li li.sfHover li ul {
+	top:			-999em;
+}
+ul.sf-menu li li li:hover ul,
+ul.sf-menu li li li.sfHover ul {
+	left:			10em; /* match ul width */
+	top:			0;
+}
+
+/*** arrows **/
+.sf-menu a.sf-with-ul {
+	padding-right: 	2.25em;
+	min-width:		1px; /* trigger IE7 hasLayout so spans position accurately */
+}
+.sf-sub-indicator {
+	position:		absolute;
+	display:		block;
+	right:			.75em;
+	top:			1.05em; /* IE6 only */
+	width:			10px;
+	height:			10px;
+	text-indent: 	-999em;
+	overflow:		hidden;
+        background-image: url('../images/superfish_arrows.png');
+	background-repeat: no-repeat;
+	background-position: bottom right;
+}
+
+a > .sf-sub-indicator {  /* give all except IE6 the correct values */
+	top:			.8em;
+}
+
+/* apply hovers to modern browsers */
+a:focus > .sf-sub-indicator,
+a:hover > .sf-sub-indicator,
+a:active > .sf-sub-indicator,
+li:hover > a > .sf-sub-indicator,
+li.sfHover > a > .sf-sub-indicator {
+	background-position: bottom left; /* arrow hovers for modern browsers*/
+}
+
+/* point right for anchors in subs */
+.sf-menu ul .sf-sub-indicator {
+    background-position:  top left;
+}
+
+/* apply hovers to modern browsers */
+.sf-menu ul a:focus > .sf-sub-indicator,
+.sf-menu ul a:hover > .sf-sub-indicator,
+.sf-menu ul a:active > .sf-sub-indicator,
+.sf-menu ul li:hover > a > .sf-sub-indicator,
+.sf-menu ul li.sfHover > a > .sf-sub-indicator {
+	background-position: top left; /* arrow hovers for modern browsers*/
+}
+
+/* OUR THEMEING */
 .sf-menu {
     float: none;
     margin: 0;
 }
 
 .sf-sub-indicator {
-    background-image: url('../images/superfish_arrows.png');
 }
 
 .sf-menu a {
-    border-left: 1px solid #ececec;
+    border-left: 1px solid #bdbdbd;
     border-top: none;
-    padding: .6em .8em;
+    padding: .5em .8em;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
+
 .sf-menu li.first a {
     border-left: none;
 }
@@ -134,13 +424,6 @@ body {
 .sf-menu a,
 .sf-menu a:visited  {
     color: #FBCC20;
-}
-
-/* cancel default styles */
-.sf-menu li,
-.sf-menu li li,
-.sf-menu li li li {
-    background: none;
 }
 
 .sf-menu li a,
@@ -172,9 +455,7 @@ body {
 
 /* sub-menus */
 .sf-menu ul {
-    border: solid 1px #bdbdbd;
-    border-top: none;
-    border-bottom: none;
+    border-right: solid 1px #bdbdbd;
 }
 
 .sf-menu ul li {
