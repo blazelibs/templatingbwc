@@ -24,6 +24,7 @@
             <div id="primary-content">
                 {% include 'templating:admin/include_user_messages.html' %}
                 {% block primary_content %}{% endblock %}
+                {% block body %}{% endblock %}
             </div>
             {% if body_type in ('sidebar-right', 'sidebar-left') %}
             <div id="sidebar-content">
