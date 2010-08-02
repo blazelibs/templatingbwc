@@ -42,7 +42,7 @@ class Default(DefaultSettings):
         self.add_route('/boxes-and-boxes', endpoint='boxes_and_boxes.html')
         self.add_route('/modals', endpoint='modals.html')
         self.add_route('/tables', endpoint='tables.html')
-        self.add_route('/forms', endpoint='forms.html')
+        self.add_route('/forms', endpoint='Forms')
         self.add_route('/jquery-ui', endpoint='jquery_ui.html')
         self.add_route('/icons', endpoint='icons.html')
         self.add_route('/make/<action>', endpoint='MakeCrud')

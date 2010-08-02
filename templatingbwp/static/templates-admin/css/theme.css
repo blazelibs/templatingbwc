@@ -602,3 +602,262 @@ table.datagrid td a.edit_link {
 table.datagrid td a.delete_link {
     background: url(../icons/delete.png);
 }
+
+/*
+
+###
+### BlazeForm forms
+###
+
+*/
+form.generated,
+div.static-form {
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
+
+form.generated div.row,
+div.static-form div.row {
+    padding: 0.4em 0 0.4em 0;
+    margin: 0;
+    border: solid 1px #CCCCCC;
+    border-top: none;
+}
+
+/* START: Expand row around floated child elements */
+/* http://csscreator.com/?q=attributes/containedfloat.php */
+form.generated div.row:after,
+div.static-form div.row:after {
+    content: ".";
+    display: block;
+    height: 0;
+    font-size:0;
+    clear: both;
+    visibility:hidden;
+}
+
+form.generated div.row,
+div.static-form div.row {
+	display: inline-block;
+}
+
+/* Hides from IE Mac \*/
+* html form.generated div.row,
+* html div.static-form div.row {
+	height: 1%;
+}
+form.generated div.row,
+div.static-form div.row {
+	display:block;
+}
+/* End Hack */
+/* END: Expand row around floated child elements */
+
+form.generated div.row.first,
+div.static-form div.row.first {
+    border-top: solid 1px #CCCCCC;
+}
+
+form.generated div.row.odd,
+div.static-form div.row.odd {
+    background-color: #F6F6F6;
+}
+
+form.generated div.row.even,
+div.static-form div.row.even {
+    background-color: #FFF;
+}
+
+/* remove background colors and borders from a submit button so it appears
+  below the form */
+form.generated div.row.submit,
+form.generated div.row.reset,
+form.generated div.row.cancel,
+form.generated div.row.submit-only,
+div.static-form div.row.submit-only {
+    background: none;
+    border: none;
+}
+
+
+form.generated div.row.submit-only,
+div.static-form div.row.submit-only {
+	padding-top: 15px;
+}
+
+form.generated label,
+div.static-form label {
+    width: 150px;
+    float: left;
+    padding: 0 0 0 10px;
+    margin: 0;
+	font-size: 1.1em;
+}
+
+form.generated div.field-wrapper,
+form.generated div.group-wrapper,
+div.static-form div.field-wrapper,
+div.static-form div.group-wrapper {
+	width: 620px;
+    position: relative;
+    float: left;
+    padding: 0 0 0 10px;
+    margin: 0;
+    /* IE double-margin bug */
+    display: inline;
+}
+
+/* margin should be the label width plus the left padding on the field-wrapper */
+form.generated div.field-wrapper.no-label,
+form.generated div.group-wrapper.no-label,
+div.static-form div.field-wrapper.no-label,
+div.static-form div.group-wrapper.no-label{
+    margin-left: 110px;
+}
+
+/****** BEGIN group elements ********/
+form.generated div.group-wrapper div.first,
+form.generated div.group-wrapper div.odd,
+form.generated div.group-wrapper div.even,
+div.static-form div.group-wrapper div.first,
+div.static-form div.group-wrapper div.odd,
+div.static-form div.group-wrapper div.even{
+	/* IE 6 doesn't understand the multi-class selectors above, so we need to cancel
+	the styling
+	*/
+	border: none;
+	background: none;
+}
+
+form.generated div.group-wrapper label,
+div.static-form div.group-wrapper label {
+	float: none;
+	width: auto;
+	padding: 0;
+	margin: 0;
+}
+
+form.generated div.grpel,
+div.static-form div.grpel {
+	float: left;
+	margin: 0 15px 0 0;
+}
+
+form.generated div.group-wrapper div.field-wrapper,
+div.static-form div.group-wrapper div.field-wrapper {
+	position: static;
+	width: auto;
+    float: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+/****** END group elements ********/
+
+
+form.generated .required_note {
+    position: absolute;
+    top: -2em;
+    right: 0;
+}
+
+form.generated .header-section {
+    position: relative;
+}
+
+form.generated .header-section .required_note_above_header {
+    position: absolute;
+    top: 1em;
+    right: 0;
+}
+
+form.generated .header-section h3 {
+    margin-top: 1em;
+}
+
+
+form.generated .required_note span.star,
+form.generated .required_note_above_header span.star{
+	color: red;
+}
+
+form.generated span.required-star {
+    position: absolute;
+    left: 0;
+    color: red;
+    padding: 0;
+    margin: 0;
+}
+
+form.generated input.text,
+form.generated input.password,
+form.generated input.file {
+    /* the width doesn't actually seem to affect the file input */
+    width: 175px;
+    padding: .2em;
+    margin: 2px 0;
+}
+
+/* have to set the width on the checkbox or otherwise the left margin
+  doesn't line up with the other input elements in IE */
+form.generated input.checkbox {
+    width: 13px;
+    height: 13px;
+}
+
+form.generated label.after {
+    width: auto;
+    padding: 0 0 0 .5em;
+}
+
+form.generated ul.errors,
+form.generated ul.notes,
+div.static-form ul.notes {
+    margin: 0px 0 0 5px;
+    padding: 3px;
+    list-style: none;
+}
+
+form.generated ul.errors {
+    margin: 0;
+    padding: 0;
+}
+
+form.generated ul.errors li,
+form.generated ul.notes li,
+div.static-form ul.notes li {
+	margin: 4px 0 0 0;
+	padding: 0 0 0 15px;
+	text-indent: -12px;
+}
+
+form.generated p.note,
+div.static-form p.note {
+    margin: 3px 0 0 5px;
+    padding: 3px 3px 3px 15px;
+    text-indent: -12px;
+}
+
+form.generated p.error {
+    margin: 0;
+    padding: 3px 8px;
+    margin: 3px 0 0 0;
+}
+
+form.generated ul.errors li {
+    padding-left: 8px;
+    text-indent: 0px;
+}
+
+form.generated p.error,
+form.generated ul.errors li {
+    background-color: #FBE3E4;
+    border: solid 2px #FBC2C4;
+    color: #860006;
+}
+
+form.generated p.frozen {
+    margin: 0;
+    padding: 0;
+}
