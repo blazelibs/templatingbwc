@@ -1,3 +1,4 @@
+import logging
 from os import path
 
 from blazeweb.config import DefaultSettings
@@ -15,10 +16,20 @@ class Default(DefaultSettings):
 
         self.add_plugin(app_package, 'templating', 'templatingbwp')
 
+        # this plugins are only used for testing, they are not required
+        # to use templatingbwp
+        self.add_plugin(app_package, 'common', 'commonbwp')
+        self.add_plugin(app_package, 'sqlalchemy', 'sqlalchemybwp')
+        self.add_plugin(app_package, 'datagrid', 'datagridbwp')
+
         self.template.default = 'templating:admin/layout.html'
+        self.template.admin = 'templating:admin/layout.html'
 
         self.name.full = 'TemplatingBWP Application'
         self.name.short = 'TemplatingBWP App'
+
+        # database
+        self.db.url = 'sqlite:///%s' % path.join(self.dirs.data, 'application.db')
 
     def init_routing(self):
         self.add_route('/', endpoint='index.html')
@@ -34,11 +45,24 @@ class Default(DefaultSettings):
         self.add_route('/forms', endpoint='forms.html')
         self.add_route('/jquery-ui', endpoint='jquery_ui.html')
         self.add_route('/icons', endpoint='icons.html')
+        self.add_route('/make/<action>', endpoint='MakeCrud')
+        self.add_route('/make/<action>/<int:objid>', endpoint='MakeCrud')
 
 class Dev(Default):
     def init(self):
         Default.init(self)
         self.apply_dev_settings()
+
+    def debug_to_stdout(self):
+        format_str = "%(name)s - %(message)s"
+        formatter = logging.Formatter(format_str)
+
+        stdout_handler = logging.StreamHandler()
+        stdout_handler.setLevel(logging.DEBUG)
+        stdout_handler.setFormatter(formatter)
+        bwh = logging.getLogger('blazeweb.middleware')
+        bwh.addHandler(stdout_handler)
+        bwh.setLevel(logging.DEBUG)
 
 class Test(Default):
     def init(self):
