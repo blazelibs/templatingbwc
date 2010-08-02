@@ -29,6 +29,12 @@ class UserMessages(View):
             user.add_message(type, 'This is a %s message.' % type)
         self.render_template()
 
+class Forms(View):
+    def default(self):
+        self.assign('form1', forms.Make())
+        self.assign('form2', forms.Form2())
+        self.render_template()
+
 class MakeCrud(CrudBase):
 
     def init(self):
