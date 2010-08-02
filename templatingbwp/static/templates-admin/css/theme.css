@@ -63,16 +63,23 @@ p img.top {
 
 a,
 a:active,
-a:hover {
+a:hover,
+.js-action-link {
+    text-decoration: underline;
     color: #215BA5;
 }
 
-a:hover {
+a:hover,
+.js-action-link:hover {
     text-decoration: none;
 }
 
 a:visited {
     color: #0B356B;
+}
+
+.js-action-link:hover {
+	cursor: pointer;
 }
 
 /*
