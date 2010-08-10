@@ -79,7 +79,7 @@ a:visited {
 }
 
 .js-action-link:hover {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 /*
@@ -309,81 +309,81 @@ h6.cbox-header {
 
 /*** ESSENTIAL STYLES ***/
 .sf-menu, .sf-menu * {
-	margin:			0;
-	padding:		0;
-	list-style:		none;
+    margin:            0;
+    padding:        0;
+    list-style:        none;
 }
 .sf-menu {
-	line-height:	1.0;
+    line-height:    1.0;
 }
 .sf-menu ul {
-	position:		absolute;
-	top:			-999em;
-	width:			10em; /* left offset of submenus need to match (see below) */
+    position:        absolute;
+    top:            -999em;
+    width:            10em; /* left offset of submenus need to match (see below) */
 }
 .sf-menu ul li {
-	width:			100%;
+    width:            100%;
 }
 .sf-menu li:hover {
-	visibility:		inherit; /* fixes IE7 'sticky bug' */
+    visibility:        inherit; /* fixes IE7 'sticky bug' */
 }
 .sf-menu li {
-	float:			left;
-	position:		relative;
+    float:            left;
+    position:        relative;
 }
 .sf-menu a,
 .sf-menu .sf-placeholder {
-	display:		block;
-	position:		relative;
+    display:        block;
+    position:        relative;
 }
 .sf-menu li:hover ul,
 .sf-menu li.sfHover ul {
-	left:			0;
-	top:			2.1em; /* match top ul list item height */
-	z-index:		99;
+    left:            0;
+    top:            2.1em; /* match top ul list item height */
+    z-index:        99;
 }
 ul.sf-menu li:hover li ul,
 ul.sf-menu li.sfHover li ul {
-	top:			-999em;
+    top:            -999em;
 }
 ul.sf-menu li li:hover ul,
 ul.sf-menu li li.sfHover ul {
-	left:			10em; /* match ul width */
-	top:			0;
+    left:            10em; /* match ul width */
+    top:            0;
 }
 ul.sf-menu li li:hover li ul,
 ul.sf-menu li li.sfHover li ul {
-	top:			-999em;
+    top: -999em;
 }
 ul.sf-menu li li li:hover ul,
 ul.sf-menu li li li.sfHover ul {
-	left:			10em; /* match ul width */
-	top:			0;
+    left: 10em; /* match ul width */
+    top: 0;
 }
 
 /*** arrows **/
 .sf-menu a.sf-with-ul,
 .sf-menu .sf-placeholder{
-	padding-right: 	2.25em;
-	min-width:		1px; /* trigger IE7 hasLayout so spans position accurately */
+    padding-right: 2.25em;
+    min-width: 1px; /* trigger IE7 hasLayout so spans position accurately */
 }
 .sf-sub-indicator {
-	position:		absolute;
-	display:		block;
-	right:			.75em;
-	top:			1.05em; /* IE6 only */
-	width:			10px;
-	height:			10px;
-	text-indent: 	-999em;
-	overflow:		hidden;
-        background-image: url('../images/superfish_arrows.png');
-	background-repeat: no-repeat;
-	background-position: bottom right;
+    position: absolute;
+    display: block;
+    right: .75em;
+    top: 1.05em; /* IE6 only */
+    width:  10px;
+    height: 10px;
+    text-indent: -999em;
+    overflow: hidden;
+    background-image: url('../images/superfish_arrows.png');
+    background-repeat: no-repeat;
+    background-position: bottom right;
 }
 
 a > .sf-sub-indicator,
 .sf-placeholder > .sf-sub-indicator {  /* give all except IE6 the correct values */
-	top:			.8em;
+    top: .8em;
 }
 
 /* apply hovers to modern browsers */
@@ -396,7 +396,7 @@ li:hover > a > .sf-sub-indicator,
 li:hover > .sf-placeholder > .sf-sub-indicator,
 li.sfHover > a > .sf-sub-indicator
 li.sfHover > .sf-placeholder > .sf-sub-indicator {
-	background-position: bottom left; /* arrow hovers for modern browsers*/
+    background-position: bottom left; /* arrow hovers for modern browsers*/
 }
 
 /* point right for anchors in subs */
@@ -415,7 +415,7 @@ li.sfHover > .sf-placeholder > .sf-sub-indicator {
 .sf-menu ul li:hover > .sf-placeholder > .sf-sub-indicator,
 .sf-menu ul li.sfHover > a > .sf-sub-indicator,
 .sf-menu ul li.sfHover > .sf-placeholder > .sf-sub-indicator {
-	background-position: top left; /* arrow hovers for modern browsers*/
+    background-position: top left; /* arrow hovers for modern browsers*/
 }
 
 /* OUR THEMEING */
@@ -639,17 +639,17 @@ div.static-form div.row:after {
 
 form.generated div.row,
 div.static-form div.row {
-	display: inline-block;
+    display: inline-block;
 }
 
 /* Hides from IE Mac \*/
 * html form.generated div.row,
 * html div.static-form div.row {
-	height: 1%;
+    height: 1%;
 }
 form.generated div.row,
 div.static-form div.row {
-	display:block;
+    display:block;
 }
 /* End Hack */
 /* END: Expand row around floated child elements */
@@ -683,7 +683,7 @@ div.static-form div.row.submit-only {
 
 form.generated div.row.submit-only,
 div.static-form div.row.submit-only {
-	padding-top: 15px;
+    padding-top: 15px;
 }
 
 form.generated label,
@@ -692,14 +692,14 @@ div.static-form label {
     float: left;
     padding: 0 0 0 10px;
     margin: 0;
-	font-size: 1.1em;
+    font-size: 1.1em;
 }
 
 form.generated div.field-wrapper,
 form.generated div.group-wrapper,
 div.static-form div.field-wrapper,
 div.static-form div.group-wrapper {
-	width: 620px;
+    width: 620px;
     position: relative;
     float: left;
     padding: 0 0 0 10px;
@@ -723,31 +723,31 @@ form.generated div.group-wrapper div.even,
 div.static-form div.group-wrapper div.first,
 div.static-form div.group-wrapper div.odd,
 div.static-form div.group-wrapper div.even{
-	/* IE 6 doesn't understand the multi-class selectors above, so we need to cancel
-	the styling
-	*/
-	border: none;
-	background: none;
+    /* IE 6 doesn't understand the multi-class selectors above, so we need to cancel
+    the styling
+    */
+    border: none;
+    background: none;
 }
 
 form.generated div.group-wrapper label,
 div.static-form div.group-wrapper label {
-	float: none;
-	width: auto;
-	padding: 0;
-	margin: 0;
+    float: none;
+    width: auto;
+    padding: 0;
+    margin: 0;
 }
 
 form.generated div.grpel,
 div.static-form div.grpel {
-	float: left;
-	margin: 0 15px 0 0;
+    float: left;
+    margin: 0 15px 0 0;
 }
 
 form.generated div.group-wrapper div.field-wrapper,
 div.static-form div.group-wrapper div.field-wrapper {
-	position: static;
-	width: auto;
+    position: static;
+    width: auto;
     float: none;
     padding: 0;
     margin: 0;
@@ -779,7 +779,7 @@ form.generated .header-section h3 {
 
 form.generated .required_note span.star,
 form.generated .required_note_above_header span.star{
-	color: red;
+    color: red;
 }
 
 form.generated span.required-star {
@@ -827,9 +827,9 @@ form.generated ul.errors {
 form.generated ul.errors li,
 form.generated ul.notes li,
 div.static-form ul.notes li {
-	margin: 4px 0 0 0;
-	padding: 0 0 0 15px;
-	text-indent: -12px;
+    margin: 4px 0 0 0;
+    padding: 0 0 0 15px;
+    text-indent: -12px;
 }
 
 form.generated p.note,
