@@ -1,0 +1,23 @@
+#compGroupA {
+    float:left;
+    width:58%;
+}
+
+#compGroupB {
+    float:right;
+    width:38%;
+}
+
+h2.demoHeaders {
+    clear:both;
+    font-size:1.3em;
+    font-weight:normal;
+    margin:2em 0 1em;
+    color: black;
+}
+
+#components #dialog_link {
+    padding:0.4em 1em 0.4em 20px;
+    position:relative;
+    text-decoration:none;
+}
