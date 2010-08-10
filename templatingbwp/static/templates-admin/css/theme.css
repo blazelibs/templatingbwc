@@ -171,8 +171,12 @@ body {
     background: url(../images/charcoal_inset_background.png) repeat-x left -30px;
 }
 
+#page-body {
+    padding-bottom: 20px;
+}
+
 #primary-content {
-    padding: 12px 14px 14px 14px;
+    padding: 12px 14px 0 14px;
     position: relative;
 }
 
