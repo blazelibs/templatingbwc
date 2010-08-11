@@ -1,5 +1,6 @@
 {{ include_js() }}
 {{ include_css() }}
+{% set use_jquery_ui_css = True %}
 {% extends settings.template.default %}
 {% block title %}jQuery UI | {{super()}}{% endblock %}
 {% block primary_content %}
