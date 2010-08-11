@@ -5,8 +5,12 @@
     <link rel="stylesheet" href="static/plugin/templating/blueprint-css/ie.css" type="text/css" media="screen, projection" />
 <![endif]-->
 
-{### TEMPLATE SPECIFIC ###}
+{### JQUERY-UI CSS ###}
+{% if use_jquery_ui_css %}
 <link rel="stylesheet" href="static/plugin/templating/templates-admin/css/jquery-ui.css" type="text/css" media="screen, projection" />
+{% endif %}
+
+{### TEMPLATE SPECIFIC ###}
 <link rel="stylesheet" href="static/plugin/templating/templates-admin/css/theme.css" type="text/css" media="screen, projection" />
 
 {### FROM TEMLATE INCLUDES ###}
