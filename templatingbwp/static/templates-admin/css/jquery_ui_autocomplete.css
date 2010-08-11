@@ -11,3 +11,5 @@
 
 /* workarounds */
 * html .ui-autocomplete { width:1px; } /* without this, the menu expands to 100% in IE6 */
+
+.ui-autocomplete { text-align: left; } /* without this, IE will center results within the dropdown */
