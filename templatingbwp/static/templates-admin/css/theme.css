@@ -131,6 +131,7 @@ body {
     color: #ececec;
     font-size: 2em;
     font-weight: normal;
+    margin: 0;
 }
 
 #page-header a {
@@ -303,11 +304,56 @@ h2.cbox-header,
 h3.cbox-header,
 h4.cbox-header,
 h5.cbox-header,
-h6.cbox-header {
+h6.cbox-header,
+.cbox-header ul li a {
     color: #ececec;
-    padding: .3em .4em;
+    padding: .4em .4em;
     font-size: 1.2em;
     margin: 0;
+}
+
+.cbox-header-tabs h1,
+.cbox-header-tabs h2,
+.cbox-header-tabs h3,
+.cbox-header-tabs h4,
+.cbox-header-tabs h5,
+.cbox-header-tabs h6 {
+    float: left;
+    padding-bottom: 0;
+}
+
+.cbox-header ul {
+    list-style: none;
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+
+.cbox-header ul li {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+.cbox-header ul li a {
+    font-size: 1.1em;
+    float: left;
+    border-left: solid 1px #4f4f4f;
+    padding: .5em 1em .5em 1em;
+    text-decoration: none;
+}
+
+.cbox-header ul li.ui-tabs-selected a {
+    background: url(../images/white_up_arrow.gif) no-repeat center bottom;
+}
+
+.cbox-header ul li a:hover {
+    background: url(../images/white_up_arrow.gif) no-repeat center bottom #5e5e5e;
+    color: #FDDA57;
+}
+
+.cbox .ui-tabs-hide {
+    display: none !important;
 }
 
 .cbox-content {
