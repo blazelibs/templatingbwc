@@ -1,3 +1,5 @@
+{% from 'templating:admin/macros.html' import jquery_ui_links %}
+
 {### BLUEPRINT-CSS ###}
 <link rel="stylesheet" href="static/plugin/templating/blueprint-css/screen.css" type="text/css" media="screen, projection" />
 <link rel="stylesheet" href="static/plugin/templating/blueprint-css/print.css" type="text/css" media="print" />
@@ -5,10 +7,8 @@
     <link rel="stylesheet" href="static/plugin/templating/blueprint-css/ie.css" type="text/css" media="screen, projection" />
 <![endif]-->
 
-{### JQUERY-UI CSS ###}
-{% if use_jquery_ui_css %}
-<link rel="stylesheet" href="static/plugin/templating/templates-admin/css/jquery-ui.css" type="text/css" media="screen, projection" />
-{% endif %}
+{#-## JQUERY-UI CSS ##-#}
+{{ jquery_ui_links(jquery_ui_includes) }}
 
 {### TEMPLATE SPECIFIC ###}
 <link rel="stylesheet" href="static/plugin/templating/templates-admin/css/theme.css" type="text/css" media="screen, projection" />
