@@ -349,6 +349,10 @@ h6.cbox-header,
     background: url(../images/white_up_arrow.gif) no-repeat center bottom;
 }
 
+.cbox-header ul li a:visited {
+    color: #ECECEC;
+}
+
 .cbox-header ul li a:hover {
     background: url(../images/white_up_arrow.gif) no-repeat center bottom #5e5e5e;
     color: #FDDA57;
