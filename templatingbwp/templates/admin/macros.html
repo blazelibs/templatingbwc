@@ -12,7 +12,7 @@
         'slider',
         'tabs',
     ]-%}
-    {%- if toinc %}
+    {%- if 'base' in toinc or toinc == 'all' %}
         <link rel="stylesheet" href="static/plugin/templating/templates-admin/css/jquery_ui_base.css" type="text/css" media="screen, projection" />
     {%- endif -%}
     {%- for cssname in possible -%}
