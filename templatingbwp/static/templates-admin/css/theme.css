@@ -865,3 +865,18 @@ form.generated p.frozen {
     margin: 0;
     padding: 0;
 }
+
+/*
+
+###
+### Blueprint-CSS overrides
+###
+
+*/
+
+/* jquery-ui uses a less specific position than blueprint, so we need to
+  add a selector so it applies
+*/
+input.ui-helper-hidden-accessible {
+    position: absolute;
+}
