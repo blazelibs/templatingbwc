@@ -9,7 +9,7 @@ class TestTemplates(object):
 
     def test_title_tag(self):
         r = self.ta.get('/')
-        assert 'Index | TemplatingBWP Application Administration' in r
+        assert 'Index | TemplatingBWC Application Administration' in r
         assert 'Change Password' not in r
 
         r = self.ta.get('/login')

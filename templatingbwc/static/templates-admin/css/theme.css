@@ -6,7 +6,7 @@
 
   BLUEPRINT CSS SETTINGS (yaml)
   tbwp-admin:
-    path: /home/rsyring/dev/blaze/templatingbwp-src/default/templatingbwp/static/blueprint-css
+    path: /home/rsyring/dev/blaze/templatingbwc-src/default/templatingbwc/static/blueprint-css
     semantic_classes:
       "#page-header, #page-nav, #page-body, #page-footer": ".span-24"
       "#page-footer": ".last"
