@@ -1,15 +1,15 @@
 from setuptools import setup, find_packages
 
-import templatingbwp
-version = templatingbwp.VERSION
+import templatingbwc
+version = templatingbwc.VERSION
 
 setup(
-    name = "TemplatingBWP",
+    name = "TemplatingBWC",
     version = version,
     description = "A BlazeWeb component with template themes",
     author = "Randy Syring",
     author_email = "rsyring@gmail.com",
-    url='http://pypi.python.org/pypi/TemplatingBWP',
+    url='http://pypi.python.org/pypi/TemplatingBWC',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',

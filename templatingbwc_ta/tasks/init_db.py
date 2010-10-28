@@ -1,5 +1,5 @@
 from blazeweb.tasks import attributes
-from templatingbwp_ta.model.orm import Make
+from templatingbwc_ta.model.orm import Make
 
 @attributes('base-data')
 def action_30_base_data():

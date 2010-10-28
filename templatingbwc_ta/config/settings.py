@@ -14,19 +14,19 @@ class Default(DefaultSettings):
 
         self.init_routing()
 
-        self.add_component(app_package, 'templating', 'templatingbwp')
+        self.add_component(app_package, 'templating', 'templatingbwc')
 
         # this components are only used for testing, they are not required
-        # to use templatingbwp
-        self.add_component(app_package, 'common', 'commonbwp')
-        self.add_component(app_package, 'sqlalchemy', 'sqlalchemybwp')
-        self.add_component(app_package, 'datagrid', 'datagridbwp')
+        # to use templatingbwc
+        self.add_component(app_package, 'common', 'commonbwc')
+        self.add_component(app_package, 'sqlalchemy', 'sqlalchemybwc')
+        self.add_component(app_package, 'datagrid', 'datagridbwc')
 
         self.template.default = 'templating:admin/layout.html'
         self.template.admin = 'templating:admin/layout.html'
 
-        self.name.full = 'TemplatingBWP Application'
-        self.name.short = 'TemplatingBWP App'
+        self.name.full = 'TemplatingBWC Application'
+        self.name.short = 'TemplatingBWC App'
 
         # database
         self.db.url = 'sqlite:///%s' % path.join(self.dirs.data, 'application.db')

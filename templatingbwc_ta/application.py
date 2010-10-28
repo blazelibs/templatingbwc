@@ -1,9 +1,9 @@
 from blazeweb.application import WSGIApp
 from blazeweb.middleware import full_wsgi_stack
 from blazeweb.scripting import application_entry
-from sqlalchemybwp.lib.middleware import SQLAlchemyApp
+from sqlalchemybwc.lib.middleware import SQLAlchemyApp
 
-import templatingbwp_ta.config.settings as settingsmod
+import templatingbwc_ta.config.settings as settingsmod
 
 def make_wsgi(profile='Dev'):
     app = WSGIApp(settingsmod, profile)
