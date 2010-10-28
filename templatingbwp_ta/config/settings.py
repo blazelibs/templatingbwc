@@ -14,13 +14,13 @@ class Default(DefaultSettings):
 
         self.init_routing()
 
-        self.add_plugin(app_package, 'templating', 'templatingbwp')
+        self.add_component(app_package, 'templating', 'templatingbwp')
 
-        # this plugins are only used for testing, they are not required
+        # this components are only used for testing, they are not required
         # to use templatingbwp
-        self.add_plugin(app_package, 'common', 'commonbwp')
-        self.add_plugin(app_package, 'sqlalchemy', 'sqlalchemybwp')
-        self.add_plugin(app_package, 'datagrid', 'datagridbwp')
+        self.add_component(app_package, 'common', 'commonbwp')
+        self.add_component(app_package, 'sqlalchemy', 'sqlalchemybwp')
+        self.add_component(app_package, 'datagrid', 'datagridbwp')
 
         self.template.default = 'templating:admin/layout.html'
         self.template.admin = 'templating:admin/layout.html'

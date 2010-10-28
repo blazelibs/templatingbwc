@@ -6,7 +6,7 @@ version = templatingbwp.VERSION
 setup(
     name = "TemplatingBWP",
     version = version,
-    description = "A BlazeWeb plugin with template themes",
+    description = "A BlazeWeb component with template themes",
     author = "Randy Syring",
     author_email = "rsyring@gmail.com",
     url='http://pypi.python.org/pypi/TemplatingBWP',

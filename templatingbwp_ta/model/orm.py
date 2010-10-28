@@ -1,4 +1,4 @@
-from plugstack.sqlalchemy.lib.declarative import declarative_base, LookupMixin
+from compstack.sqlalchemy.lib.declarative import declarative_base, LookupMixin
 
 Base = declarative_base()
 

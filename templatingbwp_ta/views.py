@@ -4,9 +4,9 @@ from blazeweb.utils import redirect
 
 import templatingbwp_ta.forms as forms
 import templatingbwp_ta.model.orm as orm
-from plugstack.common.lib.views import CrudBase
-from plugstack.datagrid.lib import DataGrid, Col, YesNo, DateTime
-from plugstack.sqlalchemy import db
+from compstack.common.lib.views import CrudBase
+from compstack.datagrid.lib import DataGrid, Col, YesNo, DateTime
+from compstack.sqlalchemy import db
 
 class Login(View):
     def default(self):
