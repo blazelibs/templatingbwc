@@ -40,8 +40,8 @@ setup(
         'License :: OSI Approved :: BSD License',
       ],
     license='BSD',
-    packages=find_packages(exclude=['ez_setup', 'tests']),
-    include_package_data=True,
+    packages=find_packages(exclude=['templatingbwc_*']),
+    include_package_data = True,
     install_requires = [
         'BlazeForm>=0.3.0',
         'BlazeWeb>=0.3.0',
