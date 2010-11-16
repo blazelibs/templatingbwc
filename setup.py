@@ -30,6 +30,7 @@ setup(
     name = "TemplatingBWC",
     version = version,
     description = "A BlazeWeb component with template themes",
+    long_description = __doc__,
     author = "Randy Syring",
     author_email = "rsyring@gmail.com",
     url='http://bitbucket.org/rsyring/templatingbwc/',
