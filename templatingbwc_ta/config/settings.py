@@ -47,6 +47,7 @@ class Default(DefaultSettings):
         self.add_route('/icons', endpoint='icons.html')
         self.add_route('/make/<action>', endpoint='MakeCrud')
         self.add_route('/make/<action>/<int:objid>', endpoint='MakeCrud')
+        self.add_route('/custom-styled-tabs', endpoint='custom_styled_tabs.html')
 
 class Dev(Default):
     def init(self):
