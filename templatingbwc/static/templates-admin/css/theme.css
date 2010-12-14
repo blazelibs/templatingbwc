@@ -584,9 +584,8 @@ form.datagrid-form select {
 }
 
 .manage-add-link {
-    position: absolute;
-    top: 1em;
-    right: 1em;
+    float: right;
+    margin-top: 0.8em;
 }
 
 /*
