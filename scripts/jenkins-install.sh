@@ -25,4 +25,4 @@ fi
 pip install "$DISTNAME"
 
 # import it
-python -c "import $PACKAGE; print $PACKAGE.VERSION"
+python -c "import $PACKAGE; print $PACKAGE; print $PACKAGE.VERSION"
