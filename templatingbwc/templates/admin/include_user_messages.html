@@ -23,11 +23,11 @@ layout, page_js() has already been called, so include_js() isn't an option #}
 
         // add the links/icons to close individual messages
         $('#user-messages li').each(function() {
-            $(this).prepend('<span class="close-icon" title="close this message">&nbsp;</span>');
+            $(this).prepend('<span class="close-icon" title="close this message">&nbsp;<\/span>');
         });
 
         // add the link to close all messages
-        $('#user-messages ul').after('<div id="close-all-messages"><a href="#">close all messages</a></div>');
+        $('#user-messages ul').after('<div id="close-all-messages"><a href="#">close all messages<\/a><\/div>');
 
         // add the event to close all messages
         $('#close-all-messages a').click(function() {
