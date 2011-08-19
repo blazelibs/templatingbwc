@@ -28,4 +28,4 @@ pip install -r pip-jenkins-reqs.txt
 pip install -e ./
 
 # run tests
-nosetests "$TAPACKAGE" --blazeweb-package="$TAPACKAGE" --with-coverage --cover-package="$TAPACKAGE,$PACKAGE" --with-xunit --with-xcoverage --cover-tests
+nosetests "$TAPACKAGE" --blazeweb-package="$TAPACKAGE" --with-xcoverage --cover-package="$TAPACKAGE,$PACKAGE" --with-xunit --cover-tests
