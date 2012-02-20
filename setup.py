@@ -31,7 +31,7 @@ setup(
     include_package_data = True,
     install_requires = [
         'BlazeForm>=0.3.0',
-        'BlazeWeb>=0.3.0',
+        'BlazeWeb>=0.4.5',
     ],
     zip_safe=False
 )
