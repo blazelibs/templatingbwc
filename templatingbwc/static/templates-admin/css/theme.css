@@ -766,6 +766,15 @@ div.static-form div.row.submit-only {
     border: none;
 }
 
+form.generated div.row input.cancel {
+    background: none;
+    border: none;
+    margin-top: 3px;
+    text-transform: lowercase;
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
 
 form.generated div.row.submit-only,
 div.static-form div.row.submit-only {
