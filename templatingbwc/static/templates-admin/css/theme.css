@@ -443,7 +443,7 @@ ul.sf-menu li li li.sfHover ul {
     top: 1.05em; /* IE6 only */
     width:  10px;
     height: 10px;
-    text-indent: -999em;
+    text-indent: -99999em;
     overflow: hidden;
     background-image: url('../images/superfish_arrows.png');
     background-repeat: no-repeat;
@@ -668,7 +668,7 @@ table.datagrid td a.delete_link {
     float: left;
     height: 16px;
     width: 16px;
-    text-indent: -1200px;
+    text-indent: -99999px;
 }
 
 .datagrid table.records td a.edit_link:focus,
