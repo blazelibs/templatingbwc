@@ -376,125 +376,12 @@ h6.cbox-header,
 
 */
 
-/*** ESSENTIAL STYLES ***/
-.sf-menu, .sf-menu * {
-    margin:            0;
-    padding:        0;
-    list-style:        none;
-}
-.sf-menu {
-    line-height:    1.0;
-}
-.sf-menu ul {
-    position:        absolute;
-    top:            -999em;
-    width:            10em; /* left offset of submenus need to match (see below) */
-}
-.sf-menu ul li {
-    width:            100%;
-}
-.sf-menu li:hover {
-    visibility:        inherit; /* fixes IE7 'sticky bug' */
-}
-.sf-menu li {
-    float:            left;
-    position:        relative;
-}
-.sf-menu a,
-.sf-menu .sf-placeholder {
-    display:        block;
-    position:        relative;
-}
-.sf-menu li:hover ul,
-.sf-menu li.sfHover ul {
-    left:            0;
-    top:            2.1em; /* match top ul list item height */
-    z-index:        99;
-}
-ul.sf-menu li:hover li ul,
-ul.sf-menu li.sfHover li ul {
-    top:            -999em;
-}
-ul.sf-menu li li:hover ul,
-ul.sf-menu li li.sfHover ul {
-    left:            10em; /* match ul width */
-    top:            0;
-}
-ul.sf-menu li li:hover li ul,
-ul.sf-menu li li.sfHover li ul {
-    top: -999em;
-}
-ul.sf-menu li li li:hover ul,
-ul.sf-menu li li li.sfHover ul {
-    left: 10em; /* match ul width */
-    top: 0;
-}
 
-/*** arrows **/
-.sf-menu a.sf-with-ul,
-.sf-menu .sf-placeholder{
-    padding-right: 2.25em;
-    min-width: 1px; /* trigger IE7 hasLayout so spans position accurately */
-}
-.sf-sub-indicator {
-    position: absolute;
-    display: block;
-    right: .75em;
-    top: 1.05em; /* IE6 only */
-    width:  10px;
-    height: 10px;
-    text-indent: -99999em;
-    overflow: hidden;
-    background-image: url('../images/superfish_arrows.png');
-    background-repeat: no-repeat;
-    background-position: bottom right;
-}
-
-a > .sf-sub-indicator,
-.sf-placeholder > .sf-sub-indicator {  /* give all except IE6 the correct values */
-    top: .8em;
-}
-
-/* apply hovers to modern browsers */
-a:focus > .sf-sub-indicator,
-.sf-placeholder:focus > .sf-sub-indicator,
-a:hover > .sf-sub-indicator,
-.sf-placeholder:hover > .sf-sub-indicator,
-a:active > .sf-sub-indicator,
-li:hover > a > .sf-sub-indicator,
-li:hover > .sf-placeholder > .sf-sub-indicator,
-li.sfHover > a > .sf-sub-indicator
-li.sfHover > .sf-placeholder > .sf-sub-indicator {
-    background-position: bottom left; /* arrow hovers for modern browsers*/
-}
-
-/* point right for anchors in subs */
-.sf-menu ul .sf-sub-indicator {
-    background-position:  top left;
-}
-
-/* apply hovers to modern browsers */
-.sf-menu ul a:focus > .sf-sub-indicator,
-.sf-menu ul .sf-placeholder:focus > .sf-sub-indicator,
-.sf-menu ul a:hover > .sf-sub-indicator,
-.sf-menu ul .sf-placeholder:hover > .sf-sub-indicator,
-.sf-menu ul a:active > .sf-sub-indicator,
-.sf-menu ul .sf-placeholder:active > .sf-sub-indicator,
-.sf-menu ul li:hover > a > .sf-sub-indicator,
-.sf-menu ul li:hover > .sf-placeholder > .sf-sub-indicator,
-.sf-menu ul li.sfHover > a > .sf-sub-indicator,
-.sf-menu ul li.sfHover > .sf-placeholder > .sf-sub-indicator {
-    background-position: top left; /* arrow hovers for modern browsers*/
-}
-
-/* OUR THEMEING */
 .sf-menu {
     float: none;
     margin: 0;
     padding-left: 4px; /* menu's have 10px of left margin and we want 14px total to match content padding */
-}
-
-.sf-sub-indicator {
+    line-height: 1;
 }
 
 .sf-menu a,
@@ -508,6 +395,10 @@ li.sfHover > .sf-placeholder > .sf-sub-indicator {
 
 .sf-menu .sf-placeholder {
     padding-right: 2.25em;
+}
+
+.sf-menu li {
+    background: none;
 }
 
 .sf-menu li.first a,
@@ -549,6 +440,12 @@ li.sfHover > .sf-placeholder > .sf-sub-indicator {
     z-index: 1; /* IE7: drop-down nav ends up behind box headers without this */
 }
 
+.sf-arrows > li > .sf-with-ul:focus:after,
+.sf-arrows > li:hover > .sf-with-ul:after,
+.sf-arrows > .sfHover > .sf-with-ul:after {
+	border-top-color: black; /* IE8 fallback colour */
+}
+
 /* sub-menus */
 .sf-menu ul {
     border-right: solid 1px #bdbdbd;
@@ -570,123 +467,18 @@ li.sfHover > .sf-placeholder > .sf-sub-indicator {
     border-top: 1px solid #bdbdbd;
 }
 
-/*
-
-###
-### DatagridBWP Controls
-###
-
-*/
-
-form.datagrid-form input,
-form.datagrid-form select {
-    margin-bottom: 1px;
+.sf-arrows ul .sf-with-ul:after {
+	margin-top: -5px;
+	margin-right: -3px;
+	border-color: transparent;
+	border-left-color: #000000; /* edit this to suit design (no rgba in IE8) */
+	border-left-color: rgba(0,0,0,.5);
 }
-
-.manage-add-link {
-    float: right;
-    margin-top: 0.8em;
-}
-
-/*
-
-###
-### datagrid tables
-###
-
-*/
-
-.datagrid table.records,
-table.datagrid {
-    margin-top: 1em;
-}
-
-.datagrid table.records th,
-.datagrid table.records td,
-table.datagrid th,
-table.datagrid td {
-    padding: .5em 1em;
-    margin: 0px;
-    text-align: center;
-}
-
-.datagrid table.records td.ta-left,
-table.datagrid td.ta-left {
-    text-align: left;
-}
-
-.datagrid table.records th,
-table.datagrid th {
-    font-weight: bold;
-    color: #ececec;
-    background-color: #31527C;
-    text-align: center;
-    border-bottom: solid 1px white;
-    border-right: solid 1px white;
-    border-top: solid 1px white;
-}
-
-.datagrid table.records th a,
-table.datagrid th a {
-    color: #ececec;
-}
-
-.datagrid table.records th a.sort-asc,
-table.datagrid th a.sort-asc {
-    padding-right: 40px;
-    background: url(../icons/th_arrow_up.png) no-repeat right -7px;
-}
-
-.datagrid table.records th a.sort-desc,
-table.datagrid th a.sort-desc {
-    padding-right: 40px;
-    background: url(../icons/th_arrow_down.png) no-repeat right -7px;
-}
-
-.datagrid table.records td,
-table.datagrid td {
-    border-bottom: solid 1px white;
-    border-right: solid 1px white;
-}
-
-.datagrid table.records tr.even td,
-table.datagrid tr.even td{
-    background-color: #d5d5d5;
-}
-
-.datagrid table.records td,
-.datagrid table.records tr.odd td,
-table.datagrid td,
-table.datagrid tr.odd td{
-    background-color: #e5e5e5;
-}
-
-.datagrid table.records td a.edit_link,
-.datagrid table.records td a.delete_link,
-table.datagrid td a.edit_link,
-table.datagrid td a.delete_link {
-    float: left;
-    height: 16px;
-    width: 16px;
-    text-indent: -99999px;
-}
-
-.datagrid table.records td a.edit_link:focus,
-.datagrid table.records td a.delete_link:focus,
-table.datagrid td a.edit_link:focus,
-table.datagrid td a.delete_link:focus {
-    outline: 0;
-}
-
-.datagrid table.records td a.edit_link,
-table.datagrid td a.edit_link {
-    background: url(../icons/application_form_edit.png);
-    margin-left: 1em;
-}
-
-.datagrid table.records td a.delete_link,
-table.datagrid td a.delete_link {
-    background: url(../icons/delete.png);
+.sf-arrows ul li > .sf-with-ul:focus:after,
+.sf-arrows ul li:hover > .sf-with-ul:after,
+.sf-arrows ul .sfHover > .sf-with-ul:after {
+	border-left-color: white;
+	border-left-color: rgba(255,255,255,.5);
 }
 
 /*
