@@ -2,7 +2,7 @@ Change Log
 ----------
 
 
-0.3.1 released ???
+0.3.1 released 2014-09-18
 ===========================
 
 * BC break: updated jQuery to latest 1.x version (1.11.1)
