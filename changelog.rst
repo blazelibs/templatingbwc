@@ -5,7 +5,12 @@ Change Log
 0.3.1 released ???
 ===========================
 
-* ???
+* BC break: updated jQuery to latest 1.x version (1.11.1)
+* updates related to jQuery: jQuery-UI, Superfish, HoverIntent
+* jQuery-UI css now monolithic, jquery_ui_links macro deprecated
+* Select2 updated to 3.5.1
+* removed webgrid-specific CSS (relevant styles are in webgrid)
+* updated image-link text-indents which would be problematic for wide displays
 
 0.3.0 released 2014-08-20
 ===========================
