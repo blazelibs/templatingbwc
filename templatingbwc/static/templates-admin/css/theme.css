@@ -397,6 +397,12 @@ h6.cbox-header,
 	background-image: url("../images/jquery-ui/ui-icons_454545_256x240.png");
 }
 
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected {
+    margin-bottom: -1px;
+    border-bottom-width: 1px;
+    border-bottom-color: #FFF;
+}
+
 .ui-tabs .ui-tabs-nav li a {
     float: left;
     padding: 0.5em 1em;
