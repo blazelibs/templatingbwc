@@ -1,7 +1,0 @@
-^(build|dist|TemplatingBWC\.egg-info)/
-\.py[co]$
-syntax: glob
-.coverage
-coverage.xml
-nosetests.xml
-*.komodo*
