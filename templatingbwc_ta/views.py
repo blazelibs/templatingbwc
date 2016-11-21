@@ -6,7 +6,7 @@ import templatingbwc_ta.forms as forms
 import templatingbwc_ta.grids as grids
 import templatingbwc_ta.model.orm as orm
 from compstack.common.lib.views import CrudBase
-from compstack.sqlalchemy import db
+
 
 class Login(View):
     def default(self):
@@ -15,12 +15,14 @@ class Login(View):
         user.add_message('success', 'You have been logged in.')
         redirect('/')
 
+
 class Logout(View):
     def default(self):
         user.is_authenticated = False
         user.display_name = None
         user.add_message('success', 'You have been logged out.')
         redirect('/')
+
 
 class UserMessages(View):
     def default(self):
@@ -29,11 +31,13 @@ class UserMessages(View):
             user.add_message(type, 'This is a %s message.' % type)
         self.render_template()
 
+
 class Forms(View):
     def default(self):
         self.assign('form1', forms.Make())
         self.assign('form2', forms.Form2())
         self.render_template()
+
 
 class MakeCrud(CrudBase):
 

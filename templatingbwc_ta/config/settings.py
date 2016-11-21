@@ -6,6 +6,7 @@ from blazeweb.config import DefaultSettings
 basedir = path.dirname(path.dirname(__file__))
 app_package = path.basename(basedir)
 
+
 class Default(DefaultSettings):
     def init(self):
         self.dirs.base = basedir
@@ -49,6 +50,7 @@ class Default(DefaultSettings):
         self.add_route('/make/<action>/<int:objid>', endpoint='MakeCrud')
         self.add_route('/custom-styled-tabs', endpoint='custom_styled_tabs.html')
 
+
 class Dev(Default):
     def init(self):
         Default.init(self)
@@ -65,10 +67,12 @@ class Dev(Default):
         bwh.addHandler(stdout_handler)
         bwh.setLevel(logging.DEBUG)
 
+
 class Test(Default):
     def init(self):
         Default.init(self)
         self.apply_test_settings()
+
 
 try:
     from .site_settings import *  # noqa

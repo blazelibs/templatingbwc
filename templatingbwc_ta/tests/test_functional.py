@@ -1,6 +1,7 @@
 from blazeweb.globals import ag
 from blazeweb.testing import TestApp
 
+
 class TestTemplates(object):
 
     @classmethod
