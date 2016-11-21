@@ -2,9 +2,8 @@
 
 commonbwc
 coverage
-datagridbwc
 nose
 sqlalchemybwc
 tox
-webhelpers
+webgrid
 webtest

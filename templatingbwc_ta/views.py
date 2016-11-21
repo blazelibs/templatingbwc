@@ -3,9 +3,9 @@ from blazeweb.views import View
 from blazeweb.utils import redirect
 
 import templatingbwc_ta.forms as forms
+import templatingbwc_ta.grids as grids
 import templatingbwc_ta.model.orm as orm
 from compstack.common.lib.views import CrudBase
-from compstack.datagrid.lib import DataGrid, Col, YesNo, DateTime
 from compstack.sqlalchemy import db
 
 class Login(View):
@@ -38,7 +38,7 @@ class Forms(View):
 class MakeCrud(CrudBase):
 
     def init(self):
-        CrudBase.init(self, 'Make', 'Makes', forms.Make, orm.Make)
+        CrudBase.init(self, 'Make', 'Makes', forms.Make, orm.Make, gridcls=grids.Make)
         self.allow_anonymous = True
         self.add_processor('option')
 
@@ -56,48 +56,3 @@ class MakeCrud(CrudBase):
         self.option = option
         self.prep_makes()
         CrudBase.auth_post(self, action, objid)
-
-    def manage_init_grid(self):
-        dg = DataGrid(
-            db.sess.execute,
-            per_page = 10 if self.option == 'one-page' else 3,
-            class_='datagrid'
-            )
-        dg.add_col(
-            'id',
-            orm.Make.id,
-            inresult=True
-        )
-        dg.add_tablecol(
-            Col('Actions',
-                extractor=self.manage_action_links,
-                width_th='8%'
-            ),
-            orm.Make.id,
-            sort=None
-        )
-        dg.add_tablecol(
-            Col('Label', class_td='ta-left'),
-            orm.Make.label,
-            filter_on=True,
-            sort='both'
-        )
-        dg.add_tablecol(
-            YesNo('Active'),
-            orm.Make.active_flag,
-            filter_on=True,
-            sort='both'
-        )
-        dg.add_tablecol(
-            DateTime('Created'),
-            orm.Make.createdts,
-            filter_on=True,
-            sort='both'
-        )
-        dg.add_tablecol(
-            DateTime('Last Updated'),
-            orm.Make.updatedts,
-            filter_on=True,
-            sort='both'
-        )
-        return dg

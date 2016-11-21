@@ -20,7 +20,7 @@ class Default(DefaultSettings):
         # to use templatingbwc
         self.add_component(app_package, 'common', 'commonbwc')
         self.add_component(app_package, 'sqlalchemy', 'sqlalchemybwc')
-        self.add_component(app_package, 'datagrid', 'datagridbwc')
+        self.add_component(app_package, 'webgrid', 'webgrid')
 
         self.template.default = 'templating:admin/layout.html'
         self.template.admin = 'templating:admin/layout.html'
