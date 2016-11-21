@@ -6,6 +6,7 @@ from blazeweb.config import DefaultSettings
 basedir = path.dirname(path.dirname(__file__))
 app_package = path.basename(basedir)
 
+
 class Default(DefaultSettings):
     def init(self):
         self.dirs.base = basedir
@@ -20,7 +21,7 @@ class Default(DefaultSettings):
         # to use templatingbwc
         self.add_component(app_package, 'common', 'commonbwc')
         self.add_component(app_package, 'sqlalchemy', 'sqlalchemybwc')
-        self.add_component(app_package, 'datagrid', 'datagridbwc')
+        self.add_component(app_package, 'webgrid', 'webgrid')
 
         self.template.default = 'templating:admin/layout.html'
         self.template.admin = 'templating:admin/layout.html'
@@ -49,6 +50,7 @@ class Default(DefaultSettings):
         self.add_route('/make/<action>/<int:objid>', endpoint='MakeCrud')
         self.add_route('/custom-styled-tabs', endpoint='custom_styled_tabs.html')
 
+
 class Dev(Default):
     def init(self):
         Default.init(self)
@@ -65,13 +67,17 @@ class Dev(Default):
         bwh.addHandler(stdout_handler)
         bwh.setLevel(logging.DEBUG)
 
+
 class Test(Default):
     def init(self):
         Default.init(self)
         self.apply_test_settings()
 
+
 try:
-    from site_settings import *
-except ImportError, e:
-    if 'No module named site_settings' not in str(e):
+    from .site_settings import *  # noqa
+except ImportError as e:
+    msg = str(e).replace("'", '')
+    if 'No module named site_settings' not in msg and \
+            'No module named templatingbwc_ta.config.site_settings' not in msg:
         raise

@@ -1,10 +1,10 @@
 import datetime
 
 from blazeweb.routing import url_for
-from savalidation import ValidationError
-from webhelpers.html.tags import link_to
+from webhelpers2.html.tags import link_to
 
 from compstack.common.lib.forms import Form
+
 
 class LookupMixin(object):
     def add_active_flag(self):
@@ -17,7 +17,8 @@ class LookupMixin(object):
         sg = self.add_elgroup('submit-group', class_='submit-only')
         sg.add_submit('submit')
         crud_view = crud_view or self.__class__.__name__ + 'Crud'
-        sg.add_static('cancel', None, link_to('Cancel', url_for(crud_view, action='manage'), title='Go back to the manage page'))
+        sg.add_static('cancel', None, link_to('Cancel', url_for(crud_view, action='manage'),
+                                              title='Go back to the manage page'))
         return sg
 
     def add_lookup_fields(self, crud_view=None):
@@ -25,9 +26,11 @@ class LookupMixin(object):
             self.add_active_flag(), \
             self.add_submit(crud_view)
 
+
 class Make(Form, LookupMixin):
     def init(self):
         self.add_lookup_fields()
+
 
 class Form2(Form):
     def init(self):
@@ -35,14 +38,15 @@ class Form2(Form):
         el = self.add_checkbox('checkbox', 'Checkbox')
         el = self.add_file('file', 'File')
         el = self.add_hidden('hidden', defaultval='my hidden val')
-        el = self.add_image('image', 'Image', defaultval='my image val', src='images/icons/b_edit.png')
+        el = self.add_image('image', 'Image', defaultval='my image val',
+                            src='images/icons/b_edit.png')
         el = self.add_text('text', 'Text')
         el = self.add_password('password', 'Password')
         el.add_note('I have a note')
         el = self.add_confirm('confirm', 'Confirm Password', match='password')
         el.add_error('it did not match')
         el = self.add_date('date', 'Date', defaultval=datetime.date(2009, 12, 3))
-        emel = self.add_email('email', 'Email', required=True)
+        self.add_email('email', 'Email', required=True)
         el = self.add_time('time', 'Time')
         el.add_note('I have two notes')
         el.add_note('my second note')
@@ -50,7 +54,7 @@ class Form2(Form):
         el.add_note('I have a note')
         el.add_error('test error')
         el.add_error('another test error')
-        options = [('1', 'one'), ('2','two')]
+        options = [('1', 'one'), ('2', 'two')]
         el = self.add_select('select', options, 'Select')
         el = self.add_mselect('mselect', options, 'Multi Select')
         el = self.add_textarea('textarea', 'Text Area')

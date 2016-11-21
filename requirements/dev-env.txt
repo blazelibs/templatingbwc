@@ -1,0 +1,9 @@
+-r common.txt
+
+commonbwc
+coverage
+nose
+sqlalchemybwc
+tox
+webgrid
+webtest

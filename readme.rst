@@ -1,3 +1,15 @@
+TemplatingBWC
+=============
+
+.. image:: https://ci.appveyor.com/api/projects/status/bhpcl30hw36y6wyi?svg=true
+    :target: https://ci.appveyor.com/project/level12/templatingbwc
+
+.. image:: https://circleci.com/gh/blazelibs/templatingbwc.svg?style=shield
+    :target: https://circleci.com/gh/blazelibs/templatingbwc
+
+.. image:: https://codecov.io/gh/blazelibs/templatingbwc/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/blazelibs/templatingbwc
+
 Introduction
 ---------------
 
@@ -16,5 +28,5 @@ Current Status
 
 The code stays pretty stable, but the API may change in the future.
 
-The `TemplatingBWC tip <http://bitbucket.org/rsyring/templatingbwc/get/tip.zip#egg=templatingbwc-dev>`_
+The `TemplatingBWC tip <https://github.com/blazelibs/templatingbwc/archive/master.zip#egg=templatingbwc-dev>`_
 is installable via `easy_install` with ``easy_install TemplatingBWC==dev``.
