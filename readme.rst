@@ -16,5 +16,5 @@ Current Status
 
 The code stays pretty stable, but the API may change in the future.
 
-The `TemplatingBWC tip <http://bitbucket.org/rsyring/templatingbwc/get/tip.zip#egg=templatingbwc-dev>`_
+The `TemplatingBWC tip <https://github.com/blazelibs/templatingbwc/archive/master.zip#egg=templatingbwc-dev>`_
 is installable via `easy_install` with ``easy_install TemplatingBWC==dev``.
