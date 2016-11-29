@@ -1,9 +1,12 @@
 -r common.txt
 
+codecov
 commonbwc
 coverage
+flake8
 nose
 sqlalchemybwc
 tox
 webgrid
 webtest
+wheel
