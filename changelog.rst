@@ -2,10 +2,12 @@ Change Log
 ----------
 
 
-0.3.2 released ???
+0.4.0 released 2016-11-29
 ===========================
 
-* ???
+* Add support for Python 3 (3.4 and 3.5)
+* Set up continuous integration testing on CircleCI and AppVeyor
+* Test coverage is on CodeCov
 
 0.3.1 released 2014-09-18
 ===========================
